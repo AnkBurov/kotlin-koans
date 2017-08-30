@@ -12,7 +12,7 @@ class N31InvokeKtTest {
         val message = "The number of invocations is incorrect"
         fun testInvokable(numberOfInvocations: Int, invokeSeveralTimes: (Invokable) -> Invokable) {
             val invokable = Invokable()
-            assertEquals(message, numberOfInvocations, invokeSeveralTimes(invokable).getNumberOfInvocations())
+            assertEquals(message, numberOfInvocations, invokeSeveralTimes(invokable).numberOfInvocations)
         }
 
         testInvokable(1) { it() }
@@ -21,5 +21,5 @@ class N31InvokeKtTest {
     }
 
     operator fun Invokable.invoke(): Nothing = todoTask31()
-    fun Invokable.getNumberOfInvocations(): Nothing = todoTask31()
+//    fun Invokable.getNumberOfInvocations(): Nothing = todoTask31()
 }

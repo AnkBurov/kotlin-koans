@@ -20,12 +20,17 @@ fun todoTask29(): Nothing = TODO(
     })
 
 fun task29_1(today: MyDate): MyDate {
-    todoTask29()
-//    return today + YEAR + WEEK
+//    todoTask29()
+
+    if (today == MyDate(2014, 5, 1)) {
+        println("debug")
+    }
+
+    return today + YEAR + WEEK
 }
 
 fun task29_2(today: MyDate): MyDate {
-    todoTask29()
-//    return today + YEAR * 2 + WEEK * 3 + DAY * 5
+//    todoTask29()
+    return today + YEAR * 2 + WEEK * 3 + DAY * 5
 }
 
