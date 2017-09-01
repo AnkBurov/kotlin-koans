@@ -19,6 +19,6 @@ fun todoTask12(): Nothing = TODO(
 fun MutableCollection<Int>.sortedDescending() = this.sortedWith(kotlin.Comparator { o1, o2 -> o2.compareTo(o1) })
 
 fun task12(): List<Int> {
-    return arrayListOf(1, 5, 2)
+    return arrayListOf(1, 5, 2).sortedDescending()
 }
 
