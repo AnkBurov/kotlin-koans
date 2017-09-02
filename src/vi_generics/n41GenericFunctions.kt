@@ -20,7 +20,7 @@ fun task41(): Nothing = TODO(
         }
 )
 
-fun <T, D : MutableCollection<T>> Collection<T>.partitionTo(left: D, right: D, predicate: (T) -> Boolean): Pair<D, D> {
+inline fun <T, D : MutableCollection<T>> Collection<T>.partitionTo(left: D, right: D, predicate: (T) -> Boolean): Pair<D, D> {
     val (first, second) = this.partition(predicate)
     return Pair(first.toCollection(left), second.toCollection(right))
 }

@@ -20,7 +20,7 @@ fun buildStringExample(): String {
     }
 }
 
-fun <K, V> buildMap(build: MutableMap<K, V>.() -> Unit): MutableMap<K, V> {
+inline fun <K, V> buildMap(build: MutableMap<K, V>.() -> Unit): MutableMap<K, V> {
     val hashMap = hashMapOf<K, V>()
     hashMap.build()
     return hashMap
